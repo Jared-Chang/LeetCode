@@ -22,7 +22,7 @@ function findCycle(table, visited, current)
     return false;
 }
 
-var canFinish = function(numCourses, prerequisites) {
+var findOrder = function(numCourses, prerequisites) {
     let table = Array.from(({length: numCourses}), e => []);
 
     prerequisites.forEach(pair => { table[pair[0]].push(pair[1]); });
@@ -38,4 +38,4 @@ var canFinish = function(numCourses, prerequisites) {
     return !anyCycle;
 };
 
-console.log(canFinish(4, [[2,0],[1,0],[3,1],[3,2],[1,3]]))
+console.log(findOrder(4, [[2,0],[1,0],[3,1],[3,2],[1,3]]))
