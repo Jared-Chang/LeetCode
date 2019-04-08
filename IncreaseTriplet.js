@@ -3,8 +3,8 @@
  * @return {boolean}
  */
 var increasingTriplet = function (nums) {
-    let left = 1000000000;
-    let mid = 1000000000;
+    let left = Infinity;
+    let mid = Infinity;
 
     for (let i = 0; i < nums.length; ++i)
     {
