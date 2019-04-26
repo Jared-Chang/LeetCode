@@ -6,7 +6,7 @@ var groupAnagrams = function(strs) {
 
     let map = {};
 
-    strs.map(str => {
+    strs.forEach(str => {
         let key = str.split('')
                      .sort((a, b) => { return a.charCodeAt(0) - b.charCodeAt(0)})
                      .join('');

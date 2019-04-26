@@ -21,7 +21,10 @@ var letterCombinations = function(digits) {
 
     const alphabets = ['', '*', "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"];
 
-    let alphabetList = digits.split('').map(d => alphabets[parseInt(d)]).filter(a => { return a.length > 0; });
+    let alphabetList = 
+    digits.split('')
+    .map(d => alphabets[parseInt(d)])
+    .filter(a => { return a.length > 0; });
 
     let result = [];
 
